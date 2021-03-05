@@ -1,4 +1,4 @@
-![logo](https://user-images.githubusercontent.com/19271573/110067280-c8360480-7d49-11eb-8bd9-5f21af1e8db3.png)
+![logo](https://user-images.githubusercontent.com/19271573/110070733-fe2ab700-7d50-11eb-84e4-f0a6ea17cf35.png)
 
 # @upnread/post-renderer
 [Upnread](https://upnread.com) is a CMS that help companies and users to build custom blogs! You can install **@upnread/post-renderer** library to render your amazing posts that you have created on your account.
