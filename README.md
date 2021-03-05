@@ -1,8 +1,12 @@
-# @upnread/post-renderer
+![logo](https://user-images.githubusercontent.com/19271573/110067280-c8360480-7d49-11eb-8bd9-5f21af1e8db3.png)
 
-> Made with create-react-library
+# @upnread/post-renderer
+[Upnread](https://upnread.com) is a CMS that help companies and users to build custom blogs! You can install **@upnread/post-renderer** library to render your amazing posts that you have created on your account.
 
 [![NPM](https://img.shields.io/npm/v/@upnread/post-renderer.svg)](https://www.npmjs.com/package/@upnread/post-renderer) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
+### Note
+Before installing this library make sure that you have created an account in [Upnread](https://upnread.com)
 
 ## Install
 
@@ -10,7 +14,10 @@
 npm install --save @upnread/post-renderer
 ```
 
-## Usage
+## Read our documentation!
+Enter to our [documentation](https://upnread.com/docs) we have a list of end points you can use to get your posts and build your amazing blog!
+
+## Usage to render your post
 
 ```jsx
 import React from 'react'
@@ -45,6 +52,5 @@ export default App
 
 ```
 
-## License
-
-MIT © [Upnread](https://github.com/Upnread)
+## Visit our web site
+[https://upnread.com](https://upnread.com)
