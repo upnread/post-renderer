@@ -1,7 +1,7 @@
 {
   "name": "@upnread/post-renderer",
   "version": "1.0.0",
-  "description": "Made with create-react-library",
+  "description": "Upnread library to render your amazing posts!",
   "author": "Upnread",
   "license": "MIT",
   "repository": "git@github.com:upnread/post-renderer.git",
