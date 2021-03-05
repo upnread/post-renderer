@@ -15,7 +15,7 @@ npm install --save @upnread/post-renderer
 ```
 
 ## Read our documentation!
-Enter to our [documentation](https://upnread.com/docs) we have a list of end points you can use to get your posts and build your amazing blog!
+Enter to our [documentation](https://upnread.com/docs), we have a list of end points you can use to get your posts and build your amazing blog!
 
 ## Usage to render your post
 
