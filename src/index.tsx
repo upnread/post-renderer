@@ -11,9 +11,10 @@ import 'draft-js/dist/Draft.css'
 
 interface TProps {
   post: string
+  style?: React.CSSProperties
 }
 
-const PostReader = ({ post }: TProps) => {
+const PostReader = ({ post, ...props }: TProps) => {
   const [postBody, setPostBody] = React.useState(EditorState.createEmpty())
 
   React.useEffect(() => {
@@ -31,7 +32,7 @@ const PostReader = ({ post }: TProps) => {
   }
 
   return (
-    <Container>
+    <Container {...props}>
       <Editor
         blockStyleFn={myBlockStyleFn}
         editorState={postBody}

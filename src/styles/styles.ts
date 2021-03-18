@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  width: 49rem;
+  max-width: 49rem;
+  width: 100%;
 
   .blockquote {
     padding-left: 8px;
