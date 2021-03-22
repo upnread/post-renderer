@@ -33,12 +33,25 @@ async function getPostById() {
   return response
 }
 
+async function getPostBySlug() {
+  const slug = 'my-first-post' // This is the post slug to bring the post that you want by slug.
+  const token = '' // This is where you would add your private blog token that is provide it into your account.
+  const endpoint = 'https://api.upnread.com/api/post/get_post'
+
+  const response = await axios.get(endpoint, { params: { token, slug } })
+  return response
+}
+
 const App = () => {
   const [post, setPost] = React.useState({ body: '' })
 
   React.useEffect(() => {
     async function getPost() {
-      const { data } = await getPostById()
+      // you can use getPostBySlug if you want to find a post by slug
+      // you can use getPostById if you want to find a post by id
+      // in this example we are going to use post by slug
+      
+      const { data } = await getPostBySlug()
       setPost(data)
     }
 
