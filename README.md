@@ -17,7 +17,9 @@ npm install --save @upnread/post-renderer
 ## Read our documentation!
 Enter to our [documentation](https://upnread.com/docs), we have a list of end points you can use to get your posts and build your custom blog.
 
-## Usage to render your post
+# You can request your post by id or by slug
+
+## Usage to render your post by id
 
 ```jsx
 import React from 'react'
@@ -33,6 +35,32 @@ async function getPostById() {
   return response
 }
 
+const App = () => {
+  const [post, setPost] = React.useState({ body: '' })
+
+  React.useEffect(() => {
+    async function getPost() {
+      const { data } = await getPostById()
+      setPost(data)
+    }
+
+    getPost()
+  }, [])
+
+  return <PostRenderer post={post.body} />
+}
+
+export default App
+
+```
+
+## Usage to render your post by slug
+
+```jsx
+import React from 'react'
+import axios from 'axios'
+import PostRenderer from '@upnread/post-renderer'
+
 async function getPostBySlug() {
   const slug = 'my-first-post' // This is the post slug to bring the post that you want by slug.
   const token = '' // This is where you would add your private blog token that is provide it into your account.
@@ -47,10 +75,6 @@ const App = () => {
 
   React.useEffect(() => {
     async function getPost() {
-      // you can use getPostBySlug if you want to find a post by slug
-      // you can use getPostById if you want to find a post by id
-      // in this example we are going to use post by slug
-      
       const { data } = await getPostBySlug()
       setPost(data)
     }
