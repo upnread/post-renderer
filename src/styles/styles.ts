@@ -53,8 +53,19 @@ const stylesMap: IObjectKeys = {
   }
 }
 
+export function colorStyleMap(primaryColor: string) {
+  const primaryColorMap: IObjectKeys = {
+    ...stylesMap,
+    primary: {
+      color: primaryColor
+    }
+  }
+
+  return primaryColorMap
+}
+
 interface IObjectKeys {
   [key: string]: any
 }
 
-export default stylesMap
+export default colorStyleMap

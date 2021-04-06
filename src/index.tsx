@@ -12,9 +12,10 @@ import 'draft-js/dist/Draft.css'
 interface TProps {
   post: string
   style?: React.CSSProperties
+  primaryColor?: string
 }
 
-const PostReader = ({ post, ...props }: TProps) => {
+const PostReader = ({ post, primaryColor = '#3342b4', ...props }: TProps) => {
   const [postBody, setPostBody] = React.useState(EditorState.createEmpty())
 
   React.useEffect(() => {
@@ -36,7 +37,7 @@ const PostReader = ({ post, ...props }: TProps) => {
       <Editor
         blockStyleFn={myBlockStyleFn}
         editorState={postBody}
-        customStyleMap={stylesMap}
+        customStyleMap={stylesMap(primaryColor)}
         plugins={plugins}
         readOnly
       />
