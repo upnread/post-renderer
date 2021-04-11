@@ -12,7 +12,10 @@ async function getPostById() {
 }
 
 const App = () => {
-  const [post, setPost] = React.useState({ body: '' })
+  const [post, setPost] = React.useState({
+    body: '',
+    blog: { primary_color: '' }
+  })
 
   React.useEffect(() => {
     async function getPost() {
@@ -23,7 +26,9 @@ const App = () => {
     getPost()
   }, [])
 
-  return <PostRenderer primaryColor='#663399' post={post.body} />
+  return (
+    <PostRenderer primaryColor={post.blog.primary_color} post={post.body} />
+  )
 }
 
 export default App
