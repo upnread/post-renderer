@@ -21,6 +21,13 @@ Enter to our [documentation](https://upnread.com/docs), we have a list of end po
 
 ---
 
+## Params
+| Param | required | value |
+| ------------- | ------------- | ------------- |
+| post  | yes  | You need to the send **post.body** prop |
+| primary_color  | No | You can send **post.blog.primary_color** prop or just send any primary color HEX code |
+
+
 ## You can request your post by id or by slug
 
 ### Usage to render your post by id
@@ -91,6 +98,11 @@ const App = () => {
 
 export default App
 
+```
+
+### Usage with primary color
+```jsx
+<PostRenderer primaryColor={post.blog.primary_color} post={post.body} />
 ```
 
 ## Visit our web site
