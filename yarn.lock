@@ -1192,6 +1192,13 @@
     clsx "^1.0.4"
     immutable "~3.7.4"
 
+"@draft-js-plugins/hashtag@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@draft-js-plugins/hashtag/-/hashtag-4.2.0.tgz#ff21138bc02dc07b72484a597eee1acaf8bea174"
+  integrity sha512-jjrd+nvUBhhQyakvbb5zH0tqHGV4ygKOq2bzwTnG1UDqy3j1aOMcKXuZmZjl9eWTU9pBXH95jD1HTcpQE61MPA==
+  dependencies:
+    clsx "^1.0.4"
+
 "@draft-js-plugins/image@^4.1.0":
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/@draft-js-plugins/image/-/image-4.1.0.tgz#426d2d0b3e2d79a993d28a3ac7d345af6105766f"

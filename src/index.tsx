@@ -7,8 +7,6 @@ import stylesMap, { Container } from './styles/styles'
 import plugins from './utils/plugins'
 import grabbingAllPluginDecorators from './utils/decorators'
 
-import 'draft-js/dist/Draft.css'
-
 interface TProps {
   post: string
   style?: React.CSSProperties

@@ -68,6 +68,7 @@
     "@draft-js-plugins/divider": "^4.1.0",
     "@draft-js-plugins/editor": "^4.1.0",
     "@draft-js-plugins/focus": "^4.1.0",
+    "@draft-js-plugins/hashtag": "^4.2.0",
     "@draft-js-plugins/image": "^4.1.0",
     "@draft-js-plugins/linkify": "^4.1.0",
     "@draft-js-plugins/resizeable": "^4.1.0",

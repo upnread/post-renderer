@@ -3,18 +3,13 @@ import styled from 'styled-components'
 
 import { composeDecorators } from '@draft-js-plugins/editor'
 import createLinkifyPlugin from '@draft-js-plugins/linkify'
-import createHashtagPlugin from 'draft-js-hashtag-plugin'
+import createHashtagPlugin from '@draft-js-plugins/hashtag'
 import createImagePlugin from '@draft-js-plugins/image'
 import createAlignmentPlugin from '@draft-js-plugins/alignment'
 import createFocusPlugin from '@draft-js-plugins/focus'
 import createResizeablePlugin from '@draft-js-plugins/resizeable'
 import createDividerPlugin from '@draft-js-plugins/divider'
 import createVideoPlugin from '@draft-js-plugins/video'
-
-import 'prismjs/themes/prism.css'
-import 'draft-js-hashtag-plugin/lib/plugin.css'
-import '@draft-js-plugins/alignment/lib/plugin.css'
-import '@draft-js-plugins/image/lib/plugin.css'
 
 const Divider = styled.div`
   width: 100%;
