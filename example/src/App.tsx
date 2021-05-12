@@ -1,13 +1,12 @@
 import React from 'react'
-import axios from 'axios'
-import PostRenderer from '@upnread/post-renderer'
+import PostRenderer, { getPost } from '@upnread/post-renderer'
 
-async function getPostById() {
-  const post_id = 0 // This is the post id to bring the post that you want.
-  const token = '' // This is where you would add your private blog token that is provide it into your account.
-  const endpoint = 'https://api.upnread.com/api/post/get_post'
+async function fetchSinglePost() {
+  const response = await getPost({
+    slug: 'introducing-upnread',
+    token: 'R1W0bW8R8DHVQ9G9E9NSU88UAAvSxi'
+  })
 
-  const response = await axios.get(endpoint, { params: { token, post_id } })
   return response
 }
 
@@ -18,12 +17,12 @@ const App = () => {
   })
 
   React.useEffect(() => {
-    async function getPost() {
-      const { data } = await getPostById()
+    async function fetchPost() {
+      const { data } = await fetchSinglePost()
       setPost(data)
     }
 
-    getPost()
+    fetchPost()
   }, [])
 
   return (
