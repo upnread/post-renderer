@@ -30,79 +30,44 @@ Enter to our [documentation](https://upnread.com/docs), we have a list of end po
 
 ## You can request your post by id or by slug
 
-### Usage to render your post by id
+### Example of usage
 
 ```jsx
 import React from 'react'
-import axios from 'axios'
-import PostRenderer from '@upnread/post-renderer'
+import PostRenderer, { getPost } from '@upnread/post-renderer'
 
-async function getPostById() {
-  const post_id = 0 // This is the post id to bring the post that you want.
-  const token = '' // This is where you would add your private blog token that is provide it into your account.
-  const endpoint = 'https://api.upnread.com/api/post/get_post'
+async function fetchSinglePost() {
+  const response = await getPost({
+    slug: 'Your post slug',
+    token: 'Your secret token'
+  })
 
-  const response = await axios.get(endpoint, { params: { token, post_id } })
   return response
 }
 
 const App = () => {
-  const [post, setPost] = React.useState({ body: '' })
+  const [post, setPost] = React.useState({
+    body: '',
+    blog: { primary_color: '' }
+  })
 
   React.useEffect(() => {
-    async function getPost() {
-      const { data } = await getPostById()
+    async function fetchPost() {
+      const { data } = await fetchSinglePost()
       setPost(data)
     }
 
-    getPost()
+    fetchPost()
   }, [])
 
-  return <PostRenderer post={post.body} />
+  return (
+    <PostRenderer primaryColor={post.blog.primary_color} post={post.body} />
+  )
 }
 
 export default App
 
-```
 
-### Usage to render your post by slug
-
-```jsx
-import React from 'react'
-import axios from 'axios'
-import PostRenderer from '@upnread/post-renderer'
-
-async function getPostBySlug() {
-  const slug = 'my-first-post' // This is the post slug to bring the post that you want by slug.
-  const token = '' // This is where you would add your private blog token that is provide it into your account.
-  const endpoint = 'https://api.upnread.com/api/post/get_post'
-
-  const response = await axios.get(endpoint, { params: { token, slug } })
-  return response
-}
-
-const App = () => {
-  const [post, setPost] = React.useState({ body: '' })
-
-  React.useEffect(() => {
-    async function getPost() {
-      const { data } = await getPostBySlug()
-      setPost(data)
-    }
-
-    getPost()
-  }, [])
-
-  return <PostRenderer post={post.body} />
-}
-
-export default App
-
-```
-
-### Usage with primary color
-```jsx
-<PostRenderer primaryColor={post.blog.primary_color} post={post.body} />
 ```
 
 ## Visit our web site
