@@ -3,8 +3,8 @@ import PostRenderer, { getPost } from '@upnread/post-renderer'
 
 async function fetchSinglePost() {
   const response = await getPost({
-    slug: 'introducing-upnread',
-    token: 'R1W0bW8R8DHVQ9G9E9NSU88UAAvSxi'
+    slug: 'Your post slug',
+    token: 'Your secret token'
   })
 
   return response
