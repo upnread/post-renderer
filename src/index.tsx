@@ -84,7 +84,7 @@ export async function getAllAuthors(params: TToken) {
   return response
 }
 
-const PostReader = ({ post, primaryColor = '#3342b4', ...props }: TProps) => {
+function PostReader({ post, primaryColor = '#3342b4', ...props }: TProps) {
   const [postBody, setPostBody] = React.useState(EditorState.createEmpty())
 
   React.useEffect(() => {
