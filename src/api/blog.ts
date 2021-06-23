@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import axios from 'axios'
 
-const endpoint = 'https://api.upnread.com/api'
+const endpoint = 'https://secure-ravine-39715.herokuapp.com/api'
 
 interface IBasic {
   token: string
